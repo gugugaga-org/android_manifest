@@ -74,7 +74,7 @@
   <project name="android_kernel_rockchip_rk3399" path="kernel/rockchip/rk3399" revision="lineage-20" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-u-boot" path="u-boot" revision="fd8b46b41b53d50e92c553e691d02ebe044ca545" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-rkbin" path="rkbin" revision="6f057c204cc44fe6473a2240204214345056bd17" remote="rockchip" />
-  <project name="android_tools_rockchip_rktools" path="tools/rockchip/rktools" revision="lineage-20" remote="gugugaga" />
+  <project name="android_tools_rockchip_rktools" path="RKTools" revision="lineage-20" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-rkst" path="rkst" revision="623a581694d6059a9dffcecd337de65b154d3c8d" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-rktoolbox" path="external/rktoolbox" revision="1ffae9357a70a96a526e38b94579d9dec373c7c5" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-system-rk_tee_user" path="external/rk_tee_user" revision="b266e9a7348fc0856416e6aebc43a63f2dae8bf4" remote="rockchip" />
