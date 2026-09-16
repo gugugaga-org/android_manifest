@@ -34,7 +34,7 @@
   <project name="android_hardware_rockchip_keymaster4" path="hardware/rockchip/keymaster4" revision="lineage-20" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libbaseparameter" path="hardware/rockchip/libbaseparameter" revision="2d418d6c5668cc1ef7682da99a4f75e696824f5c" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libgraphicpolicy" path="hardware/rockchip/libgraphicpolicy" revision="deca46dbd76d00c4b1eeca02c2f20c92282dcc36" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libhwjpeg" path="hardware/rockchip/libhwjpeg" revision="7e733beba045a097555829431889a3901c3b4936" remote="rockchip" />
+  <project name="android_hardware_rockchip_libhwjpeg" path="hardware/rockchip/libhwjpeg" revision="lineage-20" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libmemtrack" path="hardware/rockchip/libmemtrack" revision="6357b20d79112d1529276fabb94dc67e9845bc9e" remote="rockchip" />
   <project name="android_hardware_rockchip_librkvpu" path="hardware/rockchip/librkvpu" revision="lineage-20" remote="gugugaga" />
   <project name="android_hardware_rockchip_light_aidl" path="hardware/rockchip/light_aidl" revision="lineage-20" remote="gugugaga" />
