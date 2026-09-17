@@ -72,6 +72,7 @@
 
   <!-- Boot chain and Rockchip image tools. -->
   <project name="android_kernel_rockchip_rk3399" path="kernel/rockchip/rk3399" revision="lineage-20" remote="gugugaga" />
+  <project name="android_kernel_su" path="kernel/rockchip/rk3399/KernelSU" revision="lineage-20" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-u-boot" path="u-boot" revision="fd8b46b41b53d50e92c553e691d02ebe044ca545" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-rkbin" path="rkbin" revision="6f057c204cc44fe6473a2240204214345056bd17" remote="rockchip" />
   <project name="android_tools_rockchip_rktools" path="RKTools" revision="lineage-20" remote="gugugaga" />
