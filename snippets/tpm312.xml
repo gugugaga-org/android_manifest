@@ -1,85 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Rockchip Android 13 / LineageOS 20 project additions.
+  Rockchip Android 14 / LineageOS 21 project additions.
 
-  The platform manifest is the official LineageOS lineage-20.0 manifest.
-  Rockchip BSP projects remain pinned where no LineageOS 20-specific fork is
-  required. Projects carrying compatibility changes use the gugugaga remote.
+  The platform manifest is the official LineageOS lineage-21.0 manifest.  The
+  Rockchip BSP projects come from the TinkerBoard-Android android14-rockchip
+  donor branches; the projects that carry TPM312 changes use the gugugaga
+  remote on the lineage-21.0 branch.  The Linux 4.19 kernel stays on its own
+  TPM312 branch and is not taken from the donor, whose android14-rockchip
+  kernel is Linux 6.1.
 -->
 <manifest>
   <remote name="rockchip" fetch="https://github.com/" />
 
-  <!-- ASUS/Rockchip device and packaging support. -->
-  <project name="TinkerBoard-Android/rockchip-android-device-asus-common" path="device/asus/common" revision="61e8499640c09c942622efc0d2ab788f28237483" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-device-asus-tinker_board" path="device/asus/tinker_board" revision="9598e35c6a7032435c8123285b74e53ba6ab16bf" remote="rockchip" />
-  <project name="android_device_rockchip_common" path="device/rockchip/common" revision="lineage-20" remote="gugugaga" />
-  <project name="android_device_rockchip_rk3399" path="device/rockchip/rk3399" revision="lineage-20" remote="gugugaga" />
-  <project name="android_hardware_realtek" path="hardware/realtek" revision="lineage-20" remote="gugugaga" />
-
-  <!-- RK3399 hardware stack from the verified Android 12 donor. -->
-  <project name="android_hardware_rockchip_libgralloc_bifrost" path="hardware/rockchip/libgralloc/bifrost" revision="lineage-20" remote="gugugaga" />
-  <project name="android_hardware_rockchip_libgralloc_midgard" path="hardware/rockchip/libgralloc/midgard" revision="lineage-20" remote="gugugaga" />
-  <project name="android_hardware_rockchip_audio" path="hardware/rockchip/audio" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-bootctrl" path="hardware/rockchip/bootctrl" revision="871de44a1ec48b33dc7dd60eac918380b708a955" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-camera_engine_rkisp" path="hardware/rockchip/camera_engine_rkisp" revision="9e40d99b71c15766d09c4298906c5a360fed755d" remote="rockchip" />
-  <project name="android_hardware_rockchip_camera" path="hardware/rockchip/camera" revision="lineage-20" remote="gugugaga" />
+  <project name="android_device_rockchip_common" path="device/rockchip/common" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_device_rockchip_rk3399" path="device/rockchip/rk3399" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_realtek" path="hardware/realtek" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_libgralloc_bifrost" path="hardware/rockchip/libgralloc/bifrost" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_libgralloc_midgard" path="hardware/rockchip/libgralloc/midgard" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_audio" path="hardware/rockchip/audio" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-bootctrl" path="hardware/rockchip/bootctrl" revision="e131e4b8ab5b62c460fad77ac3216fe199c9e3e1" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-camera_engine_rkisp" path="hardware/rockchip/camera_engine_rkisp" revision="2abd27e3137e189687df6ef48a54ec0c86554cae" remote="rockchip" />
+  <project name="android_hardware_rockchip_camera" path="hardware/rockchip/camera" revision="lineage-21.0" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-camera_vir" path="hardware/rockchip/camera_vir" revision="58c2c089a0acf26163607200d0ca7ea7c7351381" remote="rockchip" />
+  <!-- keep the Android 12 pin: the donor has no android14-rockchip branch -->
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-drmservice" path="hardware/rockchip/drmservice" revision="88bd4bb15a4d967afcc28ac32656a5f2ddb2f639" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-fastbootd" path="hardware/rockchip/fastbootd" revision="f3d98230ec7094e1f33adb9752030fd83a2c20a2" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-gatekeeper" path="hardware/rockchip/gatekeeper" revision="681975f415a8ce6b28c8e745c01d5ef6a041fc2d" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-hdmicec" path="hardware/rockchip/hdmicec" revision="f9a8382c0c75621be36f0e5bc43241ca661c2a25" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-hw_output" path="hardware/rockchip/hw_output" revision="ed68e7e5d4338cd836f1633e026699c04f29984b" remote="rockchip" />
-  <project name="android_hardware_rockchip_hwcomposer_drmhwc" path="hardware/rockchip/hwcomposer/drmhwc" revision="lineage-20" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-fastbootd" path="hardware/rockchip/fastbootd" revision="b8bd945e0dee696f72cb00a4a9e505235f29a271" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-gatekeeper" path="hardware/rockchip/gatekeeper" revision="570069c8e622a818ed7fcc3fa7aade544edee818" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-hdmicec" path="hardware/rockchip/hdmicec" revision="ca0f23d977dd43d5b57c19dfd02dabc889821bd4" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-hw_output" path="hardware/rockchip/hw_output" revision="69255a7863b543a61135631b7a80f8f2f2d48ee0" remote="rockchip" />
+  <project name="android_hardware_rockchip_hwcomposer_drmhwc" path="hardware/rockchip/hwcomposer/drmhwc" revision="lineage-21.0" remote="gugugaga" />
+  <!-- keep the Android 12 pin: the donor has no android14-rockchip branch -->
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-jpeghw" path="hardware/rockchip/jpeghw" revision="72b3537df45b9f20c93c9c1031aaaa73733924a2" remote="rockchip" />
-  <project name="android_hardware_rockchip_keymaster4" path="hardware/rockchip/keymaster4" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libbaseparameter" path="hardware/rockchip/libbaseparameter" revision="2d418d6c5668cc1ef7682da99a4f75e696824f5c" remote="rockchip" />
+  <project name="android_hardware_rockchip_keymaster4" path="hardware/rockchip/keymaster4" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libbaseparameter" path="hardware/rockchip/libbaseparameter" revision="b7a8a8ceb378bd99ffc68649e6b777cabab22fdf" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libgraphicpolicy" path="hardware/rockchip/libgraphicpolicy" revision="deca46dbd76d00c4b1eeca02c2f20c92282dcc36" remote="rockchip" />
-  <project name="android_hardware_rockchip_libhwjpeg" path="hardware/rockchip/libhwjpeg" revision="lineage-20" remote="gugugaga" />
+  <project name="android_hardware_rockchip_libhwjpeg" path="hardware/rockchip/libhwjpeg" revision="lineage-21.0" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libmemtrack" path="hardware/rockchip/libmemtrack" revision="6357b20d79112d1529276fabb94dc67e9845bc9e" remote="rockchip" />
-  <project name="android_hardware_rockchip_librkvpu" path="hardware/rockchip/librkvpu" revision="lineage-20" remote="gugugaga" />
-  <project name="android_hardware_rockchip_light_aidl" path="hardware/rockchip/light_aidl" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-mpi-mmz" path="hardware/rockchip/libmpimmz" revision="5e0ea717d4105dbc335c72b3c99a8f3a98796883" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-optee" path="hardware/rockchip/optee" revision="d8af22f120a30fa492ff665401b9318e48b45c82" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-outputmanager" path="vendor/rockchip/hardware/interfaces/outputmanager" revision="6dd2878bab0f9c5af7e5203e5d2332d886579deb" remote="rockchip" />
-  <project name="android_hardware_rockchip_power_aidl" path="hardware/rockchip/power_aidl" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-sensor" path="hardware/rockchip/sensor" revision="311c624b5014431170a926dacf52f1f70e14fcc5" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-thermal" path="hardware/rockchip/thermal" revision="ef8ed094afd8b47fd4740f19ed222f8f0d6275aa" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-weaver" path="hardware/rockchip/weaver" revision="120c5801e900f6738c5b137af88297e18123f1b9" remote="rockchip" />
+  <project name="android_hardware_rockchip_librkvpu" path="hardware/rockchip/librkvpu" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_light_aidl" path="hardware/rockchip/light_aidl" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-mpi-mmz" path="hardware/rockchip/libmpimmz" revision="8c9543f9d7ac580378ff822196049390f8057078" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-optee" path="hardware/rockchip/optee" revision="82db768c712c58f7e6b8501b2ba1c22cde421b95" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-outputmanager" path="vendor/rockchip/hardware/interfaces/outputmanager" revision="d2da6fd6b86e45c503091003597e81c211429a64" remote="rockchip" />
+  <project name="android_hardware_rockchip_power_aidl" path="hardware/rockchip/power_aidl" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-sensor" path="hardware/rockchip/sensor" revision="7c5b8081aef91e3b016bda928f7b979c9712db2a" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-thermal" path="hardware/rockchip/thermal" revision="80a577f97e31662db9a816b45d220c8f392bfc4f" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-weaver" path="hardware/rockchip/weaver" revision="9750b829056aa9630ef9da26fc5ccde4ffa60c2c" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-hardware-rk35-helper" path="hardware/rockchip/helper" revision="8ebaeb1c03ace90f8c5fc8caa5a7ebf8c19fc229" remote="rockchip" />
-  <project name="android_hardware_rockchip_hwcomposer_drmhwc2" path="hardware/rockchip/hwcomposer/drmhwc2" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk35-libhardware_rockchip" path="hardware/rockchip/libhardware_rockchip" revision="a47e5e4f23b7224023d7b7337e1a65b92e8277cd" remote="rockchip" />
-  <project name="android_hardware_rockchip_tv_input" path="hardware/rockchip/tv_input" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk35-udc_set" path="hardware/rockchip/udc_set" revision="43700df003d7ab8b6e368f6d86302d583db59f21" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-hardware-rk35-usb" path="hardware/rockchip/usb" revision="548eb9618411731314a3cee4aba6731d64f8d80b" remote="rockchip" />
-  <project name="android_hardware_rockchip_vibrator_aidl" path="hardware/rockchip/vibrator_aidl" revision="lineage-20" remote="gugugaga" />
-  <project name="android_hardware_rockchip_wifi" path="hardware/rockchip/wifi" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-libiep" path="hardware/rockchip/libiep" revision="5d77013abbd6eb01f6000291e0f4f4715def4cd5" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-libpq-release" path="hardware/rockchip/libpq" revision="5ae4b00334c5163a41b852b442603f1920c2fe89" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-librkcrypto" path="hardware/rockchip/librkcrypto" revision="b0f2aeaf8aa352b3df87f40e81f4064463a0137d" remote="rockchip" />
-  <project name="android_hardware_rockchip_libsvep" path="hardware/rockchip/libsvep" revision="lineage-20" remote="gugugaga" />
-  <project name="android_hardware_rockchip_librga" path="hardware/rockchip/librga" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-rknn-toolkit2" path="hardware/rockchip/rknn-toolkit2" revision="ced7b4286987d689e4cb37740e449fbf379f757d" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-rknpu2" path="hardware/rockchip/rknpu2" revision="e8a2d18f3a289fe5d2925e186f7e75882a7cb25b" remote="rockchip" />
-
-  <!-- Vendor HALs, codecs and Rockchip common product modules. -->
-  <project name="android_vendor_rockchip_common" path="vendor/rockchip/common" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware" path="vendor/rockchip/hardware" revision="0911b049c200dc2ad7904b1cc23fd92dbfe33d36" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-codec2" path="vendor/rockchip/hardware/interfaces/codec2" revision="bceb35712a442e28a3eb8e857c969dfaeb58626a" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-neuralnetworks" path="vendor/rockchip/hardware/interfaces/neuralnetworks" revision="e86f8ce0f82ff833f6894e709655d119f73ae78a" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-rksoundsetting" path="vendor/rockchip/hardware/interfaces/rksoundsetting" revision="e49e16daad0dbb6e5c5ea9d2c9fe46c7615d0516" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-rockit" path="vendor/rockchip/hardware/interfaces/rockit" revision="30925f646db9d055cebc1220729bbeb4440247de" remote="rockchip" />
+  <project name="android_hardware_rockchip_hwcomposer_drmhwc2" path="hardware/rockchip/hwcomposer/drmhwc2" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk35-libhardware_rockchip" path="hardware/rockchip/libhardware_rockchip" revision="223df5502fae66ca3a3462450fa4808956f9c32f" remote="rockchip" />
+  <project name="android_hardware_rockchip_tv_input" path="hardware/rockchip/tv_input" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk35-udc_set" path="hardware/rockchip/udc_set" revision="b38800beb198c48f62184b2d4b95ee14e72806c1" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk35-usb" path="hardware/rockchip/usb" revision="69b8a7c1a9a2b45dbc9ac48b6743503e25291571" remote="rockchip" />
+  <project name="android_hardware_rockchip_vibrator_aidl" path="hardware/rockchip/vibrator_aidl" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_wifi" path="hardware/rockchip/wifi" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-libiep" path="hardware/rockchip/libiep" revision="1762c5d36026afa5b615bc84384be05aff2ced30" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-libpq-release" path="hardware/rockchip/libpq" revision="dc8536533bfbe3b34df607e22afedbfa6ac72b2f" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-librkcrypto" path="hardware/rockchip/librkcrypto" revision="62795797b3aa3b3e9a6c32672a0c4d3d0f44c78a" remote="rockchip" />
+  <project name="android_hardware_rockchip_libsvep" path="hardware/rockchip/libsvep" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_librga" path="hardware/rockchip/librga" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-rknn-toolkit2" path="hardware/rockchip/rknn-toolkit2" revision="a6e3aa68118f336e918b00bab1bec59a25ebeab8" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-rknpu2" path="hardware/rockchip/rknpu2" revision="22b548a2862b05c93876349ae209a8d49e0fd562" remote="rockchip" />
+  <project name="android_vendor_rockchip_common" path="vendor/rockchip/common" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware" path="vendor/rockchip/hardware" revision="231a294b6ab40e2ce4096bc465afca8f19948ad1" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-codec2" path="vendor/rockchip/hardware/interfaces/codec2" revision="38772d353e0f87c4e36d0769e32caa8d91da7112" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-neuralnetworks" path="vendor/rockchip/hardware/interfaces/neuralnetworks" revision="9b1003ba4420dbc7c87ce161e67190335f1ebeff" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-rksoundsetting" path="vendor/rockchip/hardware/interfaces/rksoundsetting" revision="b5b567d9d757091880d5036e32fc3be8f6c47ff8" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-rockit" path="vendor/rockchip/hardware/interfaces/rockit" revision="cefeb9852088676c924c14b9cf46900be9b7eb14" remote="rockchip" />
+  <!-- keep the Android 12 pin: the donor has no android14-rockchip branch -->
   <project name="TinkerBoard-Android/rockchip-android-vendor-Widevine" path="vendor/widevine" revision="c2ba0189adaf48c20c1606b761c6e84568f56da4" remote="rockchip" />
-
-  <!-- Boot chain and Rockchip image tools. -->
-  <project name="android_kernel_rockchip_rk3399" path="kernel/rockchip/rk3399" revision="lineage-20" remote="gugugaga" />
-  <project name="android_kernel_su" path="kernel/rockchip/rk3399/KernelSU" revision="lineage-20" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-u-boot" path="u-boot" revision="fd8b46b41b53d50e92c553e691d02ebe044ca545" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-rkbin" path="rkbin" revision="6f057c204cc44fe6473a2240204214345056bd17" remote="rockchip" />
-  <project name="android_tools_rockchip_rktools" path="RKTools" revision="lineage-20" remote="gugugaga" />
+  <project name="android_kernel_rockchip_rk3399" path="kernel/rockchip/rk3399" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_kernel_su" path="kernel/rockchip/rk3399/KernelSU" revision="lineage-21.0" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-u-boot" path="u-boot" revision="96ec895d385a05e9f23cadd7a5d08b1a1abd8869" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-rkbin" path="rkbin" revision="ac0ce0f233d01a20b2f4b6b43c9b68d4f15f6fb3" remote="rockchip" />
+  <project name="android_tools_rockchip_rktools" path="RKTools" revision="lineage-21.0" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-rkst" path="rkst" revision="623a581694d6059a9dffcecd337de65b154d3c8d" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-rktoolbox" path="external/rktoolbox" revision="1ffae9357a70a96a526e38b94579d9dec373c7c5" remote="rockchip" />
-  <project name="TinkerBoard-Android/rockchip-android-system-rk_tee_user" path="external/rk_tee_user" revision="b266e9a7348fc0856416e6aebc43a63f2dae8bf4" remote="rockchip" />
-
-  <!-- Optional Google TV applications and development tools. -->
-  <project name="android_vendor_mtgapps" path="vendor/mtgapps" revision="lineage-20" remote="gugugaga" />
+  <project name="TinkerBoard-Android/rockchip-android-system-rk_tee_user" path="external/rk_tee_user" revision="43cb181927e1357f118c6caeceddaa538da19e06" remote="rockchip" />
+  <project name="android_vendor_mtgapps" path="vendor/mtgapps" revision="lineage-21.0" remote="gugugaga" />
 </manifest>
