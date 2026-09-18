@@ -11,6 +11,8 @@
 -->
 <manifest>
   <remote name="rockchip" fetch="https://github.com/" />
+  <!-- Pinned Android TV GApps source; APK blobs are third-party materials. -->
+  <remote name="mindthegapps" fetch="https://gitlab.com/MindTheGapps/" />
 
   <project name="android_device_rockchip_common" path="device/rockchip/common" revision="lineage-21.0" remote="gugugaga" />
   <project name="android_device_rockchip_rk3399" path="device/rockchip/rk3399" revision="lineage-21.0" remote="gugugaga" />
@@ -61,7 +63,7 @@
   <project name="TinkerBoard-Android/rockchip-android-rknn-toolkit2" path="hardware/rockchip/rknn-toolkit2" revision="a6e3aa68118f336e918b00bab1bec59a25ebeab8" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-rknpu2" path="hardware/rockchip/rknpu2" revision="22b548a2862b05c93876349ae209a8d49e0fd562" remote="rockchip" />
   <project name="android_vendor_rockchip_common" path="vendor/rockchip/common" revision="lineage-21.0" remote="gugugaga" />
-  <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware" path="vendor/rockchip/hardware" revision="231a294b6ab40e2ce4096bc465afca8f19948ad1" remote="rockchip" />
+  <project name="android_vendor_rockchip_hardware" path="vendor/rockchip/hardware" revision="lineage-21.0" remote="gugugaga" />
   <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-codec2" path="vendor/rockchip/hardware/interfaces/codec2" revision="38772d353e0f87c4e36d0769e32caa8d91da7112" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-neuralnetworks" path="vendor/rockchip/hardware/interfaces/neuralnetworks" revision="9b1003ba4420dbc7c87ce161e67190335f1ebeff" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-vendor-rockchip-hardware-rksoundsetting" path="vendor/rockchip/hardware/interfaces/rksoundsetting" revision="b5b567d9d757091880d5036e32fc3be8f6c47ff8" remote="rockchip" />
@@ -77,4 +79,5 @@
   <project name="TinkerBoard-Android/rockchip-android-rktoolbox" path="external/rktoolbox" revision="1ffae9357a70a96a526e38b94579d9dec373c7c5" remote="rockchip" />
   <project name="TinkerBoard-Android/rockchip-android-system-rk_tee_user" path="external/rk_tee_user" revision="43cb181927e1357f118c6caeceddaa538da19e06" remote="rockchip" />
   <project name="android_vendor_mtgapps" path="vendor/mtgapps" revision="lineage-21.0" remote="gugugaga" />
+  <project name="vendor_gapps_tv" path="vendor/gapps_tv" revision="7a284377e278fdd69b135dfd434b1f56f74aa986" remote="mindthegapps" />
 </manifest>

@@ -28,10 +28,11 @@ No download or overlay scripts are required. The repository is intended to
 be used with normal `repo sync`, and board-specific files are versioned in the
 projects listed by the manifest.
 
-The product includes the optional `vendor/mtgapps` Android TV application
-package by default. Those APKs are third-party materials; review their
-licenses and redistribution terms before shipping an image. Set
-`TPM312_WITH_GAPPS=false` when preparing a minimal build.
+The product can include the pinned `vendor/gapps_tv` MindTheGapps Android TV
+application package when `WITH_GMS=true`. Those APKs are third-party
+materials; review their licenses and redistribution terms before shipping an
+image. Set `TPM312_WITH_GAPPS=false` (and leave `WITH_GMS` disabled) when
+preparing a minimal build.
 
 The current LineageOS 20 tree packages KernelSU Manager as a development-only
 application. It does not add kernel-side KernelSU support unless the kernel
