@@ -1,13 +1,13 @@
-# LineageOS 20 RK3399 manifest
+# LineageOS 21 RK3399 manifest
 
 This repository is the public `repo` manifest for the RK3399 TV product on
-the LineageOS 20 / Android 13 platform. The manifest branch is `lineage-20`.
+the LineageOS 21 / Android 14 platform. The manifest branch is `lineage-21.0`.
 
 ## Checkout
 
 ```sh
 repo init -u https://github.com/gugugaga-org/android_manifest \
-    -b lineage-20 -m default.xml
+    -b lineage-21.0 -m default.xml
 repo sync -c -j$(nproc)
 ```
 
@@ -28,15 +28,15 @@ No download or overlay scripts are required. The repository is intended to
 be used with normal `repo sync`, and board-specific files are versioned in the
 projects listed by the manifest.
 
-The product can include the pinned `vendor/gapps_tv` MindTheGapps Android TV
+The product includes the pinned `vendor/gapps_tv` MindTheGapps Android TV
 application package when `WITH_GMS=true`. Those APKs are third-party
 materials; review their licenses and redistribution terms before shipping an
-image. Set `TPM312_WITH_GAPPS=false` (and leave `WITH_GMS` disabled) when
-preparing a minimal build.
+image. The only GApps switch is the standard Lineage `WITH_GMS` variable;
+set `WITH_GMS=false` when preparing a minimal build.
 
-The current LineageOS 20 tree packages KernelSU Manager as a development-only
-application. It does not add kernel-side KernelSU support unless the kernel
-project is extended separately.
+The LineageOS 21 TPM312 product carries the kernel-side KernelSU project and
+the official signed KernelSU Manager separately from GApps. The manager is
+installed by `vendor/mtgapps`; it does not add a second GApps switch.
 
 ## Manual image packaging
 
