@@ -1222,7 +1222,7 @@
   <project path="system/keymint" name="LineageOS/android_system_keymint" groups="pdk" />
   <project path="system/libartpalette" name="platform/system/libartpalette" groups="pdk" remote="aosp" />
   <project path="system/libbase" name="platform/system/libbase" groups="pdk" remote="aosp" />
-  <project path="system/libcppbor" name="platform/system/libcppbor" groups="pdk" remote="aosp" />
+  <project path="system/libcppbor" name="android_system_libcppbor" revision="lineage-21.0" remote="gugugaga" groups="pdk" />
   <project path="system/libfmq" name="platform/system/libfmq" groups="pdk" remote="aosp" />
   <project path="system/libhidl" name="LineageOS/android_system_libhidl" groups="pdk,sysui-studio" />
   <project path="system/libhwbinder" name="platform/system/libhwbinder" groups="pdk" remote="aosp" />
