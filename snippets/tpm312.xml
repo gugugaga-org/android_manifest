@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TPM312 Android 15 legacy bootstrap.  Keep the verified 4.19 BSP pinned
+     to LineageOS 21 while Android 15-specific ports are developed. -->
+<manifest>
+  <remote name="gugugaga" fetch="https://github.com/gugugaga-org/" />
+  <remote name="rockchip" fetch="https://github.com/" />
+
+  <project name="android_device_rockchip_common" path="device/rockchip/common" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_device_rockchip_rk3399" path="device/rockchip/rk3399" revision="lineage-22.2" remote="gugugaga" />
+  <project name="android_kernel_rockchip_rk3399" path="kernel/rockchip/rk3399" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_kernel_su" path="kernel/rockchip/rk3399/KernelSU" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_vendor_rockchip_common" path="vendor/rockchip/common" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_vendor_rockchip_hardware" path="vendor/rockchip/hardware" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_vendor_mtgapps" path="vendor/mtgapps" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_realtek" path="hardware/realtek" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_audio" path="hardware/rockchip/audio" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_keymaster4" path="hardware/rockchip/keymaster4" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_libgralloc_midgard" path="hardware/rockchip/libgralloc/midgard" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_hwcomposer_drmhwc2" path="hardware/rockchip/hwcomposer/drmhwc2" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_librkvpu" path="hardware/rockchip/librkvpu" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_librga" path="hardware/rockchip/librga" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_wifi" path="hardware/rockchip/wifi" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_power_aidl" path="hardware/rockchip/power_aidl" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_light_aidl" path="hardware/rockchip/light_aidl" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_hardware_rockchip_vibrator_aidl" path="hardware/rockchip/vibrator_aidl" revision="lineage-21.0" remote="gugugaga" />
+  <project name="android_tools_rockchip_rktools" path="RKTools" revision="lineage-21.0" remote="gugugaga" />
+
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libbaseparameter" path="hardware/rockchip/libbaseparameter" revision="b7a8a8ceb378bd99ffc68649e6b777cabab22fdf" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-libgraphicpolicy" path="hardware/rockchip/libgraphicpolicy" revision="deca46dbd76d00c4b1eeca02c2f20c92282dcc36" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-mpi-mmz" path="hardware/rockchip/libmpimmz" revision="8c9543f9d7ac580378ff822196049390f8057078" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-libpq-release" path="hardware/rockchip/libpq" revision="dc8536533bfbe3b34df607e22afedbfa6ac72b2f" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-hw_output" path="hardware/rockchip/hw_output" revision="69255a7863b543a61135631b7a80f8f2f2d48ee0" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-gatekeeper" path="hardware/rockchip/gatekeeper" revision="570069c8e622a818ed7fcc3fa7aade544edee818" remote="rockchip" />
+  <project name="TinkerBoard-Android/rockchip-android-hardware-rk29-weaver" path="hardware/rockchip/weaver" revision="9750b829056aa9630ef9da26fc5ccde4ffa60c2c" remote="rockchip" />
+</manifest>
