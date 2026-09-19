@@ -7,6 +7,15 @@
 
   <project name="android_device_rockchip_common" path="device/rockchip/common" revision="lineage-22.2" remote="gugugaga" />
   <project name="android_device_rockchip_rk3399" path="device/rockchip/rk3399" revision="lineage-22.2" remote="gugugaga" />
+
+  <!-- Replace the platform projects TPM312 forks; a second <project> for an
+       already declared path makes `repo` abort with "duplicate path". -->
+  <remove-project name="platform/system/libcppbor" />
+  <project name="android_system_libcppbor" path="system/libcppbor" revision="lineage-22.2" remote="gugugaga" />
+  <remove-project name="platform/external/speex" />
+  <project name="android_external_speex" path="external/speex" revision="lineage-22.2" remote="gugugaga" />
+  <remove-project name="platform/frameworks/opt/net/wifi" />
+  <project name="android_frameworks_opt_net_wifi" path="frameworks/opt/net/wifi" revision="lineage-22.2" remote="gugugaga" />
   <project name="android_kernel_rockchip_rk3399" path="kernel/rockchip/rk3399" revision="lineage-21.0" remote="gugugaga" />
   <project name="android_kernel_su" path="kernel/rockchip/rk3399/KernelSU" revision="lineage-21.0" remote="gugugaga" />
   <project name="android_vendor_rockchip_common" path="vendor/rockchip/common" revision="lineage-22.2" remote="gugugaga" />
