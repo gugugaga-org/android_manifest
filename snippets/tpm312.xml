@@ -2,9 +2,6 @@
 <!-- TPM312 Android 15 legacy bootstrap.  Keep the verified 4.19 BSP pinned
      to LineageOS 21 while Android 15-specific ports are developed. -->
 <manifest>
-  <remote name="gugugaga" fetch="https://github.com/gugugaga-org/" />
-  <remote name="rockchip" fetch="https://github.com/" />
-
   <project name="android_device_rockchip_common" path="device/rockchip/common" revision="lineage-22.2" remote="gugugaga" />
   <project name="android_device_rockchip_rk3399" path="device/rockchip/rk3399" revision="lineage-22.2" remote="gugugaga" />
 
@@ -32,6 +29,10 @@
   <project name="android_vendor_rockchip_hardware_interfaces_rockit" path="vendor/rockchip/hardware/interfaces/rockit" revision="lineage-22.2" remote="gugugaga" />
   <project name="android_vendor_rockchip_hardware_interfaces_codec2" path="vendor/rockchip/hardware/interfaces/codec2" revision="lineage-22.2" remote="gugugaga" />
   <project name="android_vendor_mtgapps" path="vendor/mtgapps" revision="lineage-21.0" remote="gugugaga" />
+  <!-- Android TV GApps for WITH_GMS=true; the vic branch is MindTheGapps for
+       Android 15.  partner_gms.mk in the vendor/lineage fork inherits
+       vendor/gapps_tv/arm64/arm64-vendor.mk when this project is present. -->
+  <project name="vendor_gapps_tv" path="vendor/gapps_tv" revision="c2bcbaccc334bf769a12a413d191b08bf6ade484" remote="mindthegapps" />
   <project name="android_hardware_realtek" path="hardware/realtek" revision="lineage-22.2" remote="gugugaga" />
   <project name="android_hardware_rockchip_audio" path="hardware/rockchip/audio" revision="lineage-21.0" remote="gugugaga" />
   <project name="android_hardware_rockchip_keymaster4" path="hardware/rockchip/keymaster4" revision="lineage-22.2" remote="gugugaga" />

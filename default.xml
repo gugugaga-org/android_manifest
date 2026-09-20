@@ -13,6 +13,16 @@
            review="android-review.googlesource.com"
            revision="refs/tags/android-15.0.0_r32" />
 
+  <remote  name="gugugaga"
+           fetch="https://github.com/gugugaga-org/" />
+
+  <remote  name="rockchip"
+           fetch="https://github.com/" />
+
+  <!-- Pinned Android TV GApps source; APK blobs are third-party materials. -->
+  <remote  name="mindthegapps"
+           fetch="https://gitlab.com/MindTheGapps/" />
+
   <default revision="refs/heads/lineage-22.2"
            remote="github"
            sync-c="true"
