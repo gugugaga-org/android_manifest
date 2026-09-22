@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="github"
-           fetch=".."
+           fetch="https://github.com/"
            review="review.lineageos.org" />
 
   <remote  name="private"
@@ -12,6 +12,10 @@
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
            revision="refs/tags/android-16.0.0_r4" />
+
+  <remote name="gugugaga" fetch="https://github.com/gugugaga-org/" />
+  <remote name="rockchip" fetch="https://github.com/" />
+  <remote name="mindthegapps" fetch="https://gitlab.com/MindTheGapps/" />
 
   <default revision="refs/heads/lineage-23.2"
            remote="github"
@@ -1028,4 +1032,5 @@
   </project>
 
   <include name="snippets/lineage.xml" />
+  <include name="snippets/tpm312.xml" />
 </manifest>
