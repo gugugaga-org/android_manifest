@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- TPM312 Android 16 QPR2 project set. Keep legacy BSP projects pinned until ported. -->
 <manifest>
-  <project name="android_device_rockchip_common" path="device/rockchip/common" revision="lineage-23.2" remote="gugugaga" />
+  <project name="android_device_rockchip_common" path="device/rockchip/common" revision="6d580111ab6bb18145dbc4089bfb1a7731336069" remote="gugugaga" />
   <project name="android_device_rockchip_rk3399" path="device/rockchip/rk3399" revision="lineage-23.2" remote="gugugaga" />
 
   <!-- Replace the platform projects TPM312 forks; a second <project> for an
