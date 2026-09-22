@@ -36,7 +36,7 @@
   <!-- Provides tee-supplicant required by the RK3399 OP-TEE KeyMint HAL. -->
   <project name="android_hardware_rockchip_optee" path="hardware/rockchip/optee" revision="lineage-23.2" remote="gugugaga" />
   <project name="android_hardware_rockchip_libgralloc_bifrost" path="hardware/rockchip/libgralloc/bifrost" revision="0afb3789eb052222f95f5834d6a89c102fb9a3f8" remote="gugugaga" />
-  <project name="android_hardware_rockchip_libgralloc_midgard" path="hardware/rockchip/libgralloc/midgard" revision="lineage-23.2" remote="gugugaga" />
+  <project name="android_hardware_rockchip_libgralloc_midgard" path="hardware/rockchip/libgralloc/midgard" revision="81751035434a410551fea79fa58f69b4d5ec2f7f" remote="gugugaga" />
   <project name="android_hardware_rockchip_hwcomposer_drmhwc2" path="hardware/rockchip/hwcomposer/drmhwc2" revision="lineage-23.2" remote="gugugaga" />
   <project name="android_hardware_rockchip_librkvpu" path="hardware/rockchip/librkvpu" revision="lineage-21.0" remote="gugugaga" />
   <project name="android_hardware_rockchip_librga" path="hardware/rockchip/librga" revision="lineage-21.0" remote="gugugaga" />
